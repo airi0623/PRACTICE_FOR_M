@@ -1,6 +1,6 @@
 # Name
  
-HASEGAWA_KORYO
+Laravel_Vue.js Starter
 
 # Required
 - PHP >= 7.3.0
