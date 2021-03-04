@@ -1,0 +1,23 @@
+{
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        // "source.organizeImports": true,
+        "source.fixAll": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "vue"
+    ],
+    "extensions.ignoreRecommendations": false
+}
