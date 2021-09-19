@@ -37,4 +37,4 @@ RUN echo "file_uploads = On\n" \
          "max_execution_time = 600\n" \
          > /usr/local/etc/php/conf.d/docker-php-ext-uploads.ini
 
-WORKDIR /var/www/hasegawa_koryo
+WORKDIR /var/www/practice_for_m

@@ -1,5 +1,5 @@
 set-up:
-	docker network create hasegawa-koryo-dev
+	docker network create practice-for-m-dev
 	docker-compose -f ./docker-compose.yml build
 
 set-up-app:
@@ -11,7 +11,7 @@ set-up-app:
 	docker-compose -f ./docker-compose.yml run --rm app chmod -R 777 ./storage/framework/
 	docker-compose -f ./docker-compose.yml run --rm app php artisan key:generate
 	docker-compose -f ./docker-compose.yml run --rm app php artisan config:cache
-	docker-compose -f ./docker-compose.yml run --rm app php artisan migrate --seed
+	# docker-compose -f ./docker-compose.yml run --rm app php artisan migrate --seed
 
 build:
 	docker-compose -f ./docker-compose.yml build
@@ -27,7 +27,7 @@ exec-app:
 	docker-compose -f ./docker-compose.yml exec app bash || true
 
 er-output:
-	docker run --rm --net hasegawa-koryo-dev -v "`pwd`/schemaspy:/output" -v "`pwd`/drivers:/drivers" schemaspy/schemaspy:snapshot -t mysql -host db:3306 -db hasegawa_koryo -u root -p root -s hasegawa_koryo
+	docker run --rm --net practice-for-m-dev -v "`pwd`/schemaspy:/output" -v "`pwd`/drivers:/drivers" schemaspy/schemaspy:snapshot -t mysql -host db:3306 -db practice_for_m_db -u root -p root -s practice_for_m_db
 
 autoload:
 	make up || true
